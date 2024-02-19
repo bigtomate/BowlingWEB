@@ -50,173 +50,151 @@
     <td>
       <table class="scoring">
         <tr>
-          <td>&nbsp;</td> <td>&nbsp;</td>
+          <td id = "scorecell1-1">&nbsp;</td> <td id = "scorecell1-3">&nbsp;</td>
         </tr>
       </table>
     </td>
     <td>
       <table class="scoring">
         <tr>
-          <td>&nbsp;</td> <td>&nbsp;</td>
+          <td id ="scorecell2-1">&nbsp;</td> <td id ="scorecell2-3">&nbsp;</td>
 
         </tr>
       </table>
     </td>    <td>
     <table class="scoring">
       <tr>
-        <td>&nbsp;</td> <td>&nbsp;</td>
+        <td id ="scorecell3-1">&nbsp;</td> <td id ="scorecell3-3">&nbsp;</td>
       </tr>
     </table>
   </td>    <td>
     <table class="scoring">
       <tr>
-        <td>&nbsp;</td> <td>&nbsp;</td>
+       <td id ="scorecell4-1">&nbsp;</td> <td id ="scorecell4-3">&nbsp;</td>
       </tr>
     </table>
   </td>    <td>
     <table class="scoring">
       <tr>
-        <td>&nbsp;</td> <td>&nbsp;</td>
+        <td id ="scorecell5-1">&nbsp;</td> <td id ="scorecell5-3">&nbsp;</td>
 
       </tr>
     </table>
   </td>    <td>
     <table class="scoring">
       <tr>
-        <td>&nbsp;</td> <td>&nbsp;</td>
+      <td id ="scorecell6-1">&nbsp;</td> <td id ="scorecell6-3">&nbsp;</td>
 
       </tr>
     </table>
   </td>    <td>
     <table class="scoring">
       <tr>
-        <td>&nbsp;</td> <td>&nbsp;</td>
+        <td id ="scorecell7-1">&nbsp;</td> <td id ="scorecell7-3">&nbsp;</td>
+      </tr>
+    </table>
+  </td>    <td>
+    <table class="scoring">
+      <tr>
+          <td id ="scorecell8-1">&nbsp;</td> <td id ="scorecell8-3">&nbsp;</td>
 
       </tr>
     </table>
   </td>    <td>
     <table class="scoring">
       <tr>
-        <td>&nbsp;</td> <td>&nbsp;</td>
-
+         <td id ="scorecell9-1">&nbsp;</td> <td id ="scorecell9-3">&nbsp;</td>
       </tr>
     </table>
   </td>    <td>
     <table class="scoring">
       <tr>
-        <td>&nbsp;</td> <td>&nbsp;</td>
-
-      </tr>
-    </table>
-  </td>    <td>
-    <table class="scoring">
-      <tr>
-        <td>&nbsp;</td> <td>&nbsp;</td>
-
-      </tr>
-    </table>
-  </td>    <td>
-    <table class="scoring">
-      <tr>
-        <td>&nbsp;</td> <td>&nbsp;</td>
-
+        <td id ="scorecell10-1">&nbsp;</td> <td id ="scorecell10-3">&nbsp;</td>
+        <td id ="scorecell10-4">&nbsp;</td>
       </tr>
     </table>
   </td>
-  </tr>
   <tr>
-    <td>
+   <td>
       <table class="scoring">
         <tr>
-          <td>&nbsp;</td> <td>&nbsp;</td>
+          <td id = "scorecell1-2">&nbsp;</td> <td id = "scorecell1-4">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+      <td>
+        <table class="scoring">
+          <tr>
+            <td id = "scorecell2-2">&nbsp;</td> <td id = "scorecell2-4">&nbsp;</td>
+          </tr>
+        </table>
+      </td>
+      <td>
+        <table class="scoring">
+          <tr>
+           <td id = "scorecell3-2">&nbsp;</td> <td id = "scorecell3-4">&nbsp;</td>
+
+          </tr>
+        </table>
+      </td>    <td>
+      <table class="scoring">
+        <tr>
+           <td id = "scorecell4-2">&nbsp;</td> <td id = "scorecell4-4">&nbsp;</td>
+        </tr>
+      </table>
+    </td>    <td>
+      <table class="scoring">
+        <tr>
+           <td id = "scorecell5-2">&nbsp;</td> <td id = "scorecell5-4">&nbsp;</td>
+        </tr>
+      </table>
+    </td>    <td>
+      <table class="scoring">
+        <tr>
+           <td id = "scorecell6-2">&nbsp;</td> <td id = "scorecell6-4">&nbsp;</td>
+
+        </tr>
+      </table>
+    </td>    <td>
+      <table class="scoring">
+        <tr>
+          <td id = "scorecell7-2">&nbsp;</td> <td id = "scorecell7-4">&nbsp;</td>
+
+        </tr>
+      </table>
+    </td>    <td>
+      <table class="scoring">
+        <tr>
+         <td id = "scorecell8-2">&nbsp;</td> <td id = "scorecell8-4">&nbsp;</td>
         </tr>
       </table>
     </td>
     <td>
       <table class="scoring">
         <tr>
-          <td>&nbsp;</td> <td>&nbsp;</td>
-
+         <td id = "scorecell9-2">&nbsp;</td> <td id = "scorecell9-4">&nbsp;</td>
         </tr>
       </table>
     </td>    <td>
-    <table class="scoring">
-      <tr>
-        <td>&nbsp;</td> <td>&nbsp;</td>
-      </tr>
-    </table>
-  </td>    <td>
-    <table class="scoring">
-      <tr>
-        <td>&nbsp;</td> <td>&nbsp;</td>
-      </tr>
-    </table>
-  </td>    <td>
-    <table class="scoring">
-      <tr>
-        <td>&nbsp;</td> <td>&nbsp;</td>
-
-      </tr>
-    </table>
-  </td>    <td>
-    <table class="scoring">
-      <tr>
-        <td>&nbsp;</td> <td>&nbsp;</td>
-
-      </tr>
-    </table>
-  </td>    <td>
-    <table class="scoring">
-      <tr>
-        <td>&nbsp;</td> <td>&nbsp;</td>
-
-      </tr>
-    </table>
-  </td>    <td>
-    <table class="scoring">
-      <tr>
-        <td>&nbsp;</td> <td>&nbsp;</td>
-
-      </tr>
-    </table>
-  </td>    <td>
-    <table class="scoring">
-      <tr>
-        <td>&nbsp;</td> <td>&nbsp;</td>
-
-      </tr>
-    </table>
-  </td>    <td>
-    <table class="scoring">
-      <tr>
-        <td>&nbsp;</td> <td>&nbsp;</td>
-
-      </tr>
-    </table>
-  </td>    <td>
-    <table class="scoring">
-      <tr>
-        <td>&nbsp;</td> <td>&nbsp;</td>
-
-      </tr>
-    </table>
-  </td>
+      <table class="scoring">
+        <tr>
+          <td id = "scorecell10-2">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
   </tr>
   </tbody>
 </table>
 
 </body>
-<form action="scoring" type="submit" id="currentsorceForm">
-    <input id = "pindownlist" type="text"/>
-</form>
+<button id ="reset">reset</button>
 <span id="displayScore"> ${score} </span>
 </html>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript">
 var pinDownList = '';
      var scoringBtns = document.getElementsByClassName("scoringbtn");
-    for (var i = 0; i < scoringBtns.length; i++) {
-
+     for (var i = 0; i < scoringBtns.length; i++) {
       document.getElementById(scoringBtns.item(i).id).addEventListener('click', function() {
             var btnId = this.id;
             btnId = btnId.replace('b', '');
@@ -230,11 +208,46 @@ var pinDownList = '';
     cache: false,
     type: "GET",
     success: function(response) {
-
+        var objectAry = JSON.parse(response);
+        for (var key in objectAry) {
+          var cellObject = objectAry[key];
+          var idx = cellObject.idx;
+          var cellIdx = 1;
+          for (var i = 0; i < cellObject.content.length; i++) {
+          var cellValue = cellObject.content[i];
+           var calculatedId = 'scorecell' + idx + '-' + cellIdx;
+           var tableCell = document.getElementById(calculatedId);
+           if (tableCell != undefined) {
+             tableCell.innerHTML = cellValue !== 'null'
+                      && cellValue !== null
+                      && cellValue !== undefined
+                      && cellValue.length !== 0? cellValue : '&nbsp;';
+           }
+           cellIdx++;
+          }
+        }
+        console.log(objectAry.map(content => ({ content })))
     },
     error: function(xhr) {
     }
       });
     });
 }
+document.getElementById('reset').addEventListener('click', function() {
+ pinDownList = '';
+       $.ajax({
+       url: window.location + 'scoring',
+       data: {
+           "pinDownList": pinDownList
+       },
+       cache: false,
+       type: "GET",
+       success: function(response) {
+       window.location.reload();
+       },
+       error: function(xhr) {
+       }
+         });
+});
+
 </script>

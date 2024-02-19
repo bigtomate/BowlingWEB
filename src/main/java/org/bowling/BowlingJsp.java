@@ -51,7 +51,7 @@ public class BowlingJsp extends HttpServlet {
         return frames;
     }
 
-    private String getFramesAsJson() {
+    public String getFramesAsJson() {
      List<String> contentList = new ArrayList<>();
       for (Frame frame : frames) {
           contentList.add(frame.toString());
@@ -62,7 +62,12 @@ public class BowlingJsp extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("bowlingscoring.jsp");
+        reset();
         String pindownlistStr = request.getParameter("pinDownList");
+        if (pindownlistStr == null || pindownlistStr.isEmpty()) {
+            reset();
+            return;
+        }
         String[] pindownList = pindownlistStr.split(",");
         for(String scoreValue : pindownList) {
             handle(scoreValue);
@@ -74,10 +79,10 @@ public class BowlingJsp extends HttpServlet {
         //requestDispatcher.forward(request, response);
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // TODO Auto-generated method stub
-        doGet(request, response);
-    }
+//    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//        // TODO Auto-generated method stub
+//        doGet(request, response);
+//    }
 
     public void handle(String currentScore) {
         int pinDown = Integer.valueOf(currentScore);
@@ -137,6 +142,7 @@ public class BowlingJsp extends HttpServlet {
         private boolean hasSpare = false;
 
         Frame(int idx) {
+            this.idx = idx;
             cells = new ScoreCell[4];
             for (int i = 0; i < cells.length; ++i) {
                 cells[i] = new ScoreCell();
@@ -183,7 +189,11 @@ public class BowlingJsp extends HttpServlet {
 
         @Override
         public String toString() {
-            return "idx" + idx + "content" + cells[idx].text;
+            List<String> cellValueList = new ArrayList<>();
+            for (ScoreCell cell : cells) {
+                cellValueList.add("\"" +cell.text+ "\"");
+            }
+            return "{" + "\"idx\"" +":" + idx +","+ "\"content\"" + ":" + cellValueList.toString() + "}" ;
         }
     }
 
@@ -254,11 +264,20 @@ public class BowlingJsp extends HttpServlet {
         }
     }
 
+    private void resetFrame(){
+        for(Frame frame : frames){
+            for(ScoreCell cell : frame.cells){
+                cell.setText("");
+            }
+        }
+    }
+
+
     private void reset() {
         frameCounter = 1;
         scoreMap = new HashMap<>();
         strikeMap = new HashMap<>();
         resetPinButton();
-        //resetFrame();
+        resetFrame();
     }
 }
