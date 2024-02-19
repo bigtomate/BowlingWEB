@@ -207,23 +207,25 @@
 
 </body>
 <form action="scoring" type="submit" id="currentsorceForm">
-    <input id = "currentsorce" type="text"/>
+    <input id = "pindownlist" type="text"/>
 </form>
-<span id="displayScore" > ${score} </span>
+<span id="displayScore"> ${score} </span>
 </html>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript">
+var pinDownList = '';
      var scoringBtns = document.getElementsByClassName("scoringbtn");
     for (var i = 0; i < scoringBtns.length; i++) {
 
       document.getElementById(scoringBtns.item(i).id).addEventListener('click', function() {
             var btnId = this.id;
-      
-     document.getElementById('currentsorce').value = this.id;
-                             $.ajax({
-    url: "http://localhost:8082/scoring",
+            btnId = btnId.replace('b', '');
+            var contentToAdd = pinDownList.length === 0? btnId : ',' + btnId;
+            pinDownList = pinDownList + contentToAdd;
+            $.ajax({
+    url: window.location + 'scoring',
     data: { 
-        "currentscore": btnId
+        "pinDownList": pinDownList
     },
     cache: false,
     type: "GET",
@@ -231,11 +233,8 @@
 
     },
     error: function(xhr) {
-
     }
       });
-
-     
     });
 }
 </script>
