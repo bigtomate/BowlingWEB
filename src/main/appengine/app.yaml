@@ -1,3 +1,0 @@
-runtime: java11
-env: flex
-entrypoint: java -Xmx64m -jar bowling.jar
