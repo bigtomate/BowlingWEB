@@ -3,16 +3,16 @@
 <head>
   <style>
    table.scoring {border: 1px solid #FFAA33; border-right:none;  border-collapse: collapse;}
-   table.scoring td {border-right: 1px solid #FFAA33;width:25px !important;}
+   table.scoring td {border-right: 1px solid #FFAA33;width:30px !important; height: 30px !important; text-align: center;}
    table.frame {margin-left:10px;}
    table.frame th {text-align:left;}
+   button.scoringbtn {height: 30px; width: 30px;}
 </style>
   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-  <title>Bowlingscoring Sheet</title>
 </head>
 <body>
+    <h2>Bowlingsocring Sheet</h2>
 <table style="margin-left:10px;">
-  <thead>bowling sheet</thead>
   <tbody>
   <tr>
     <td>
@@ -187,7 +187,7 @@
 </table>
 
 </body>
-<button id ="reset">reset</button>
+<button id ="reset" style="margin-left:20px;">reset</button>
 <span id="displayScore"> ${score} </span>
 </html>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -209,8 +209,9 @@ var pinDownList = '';
     type: "GET",
     success: function(response) {
         var objectAry = JSON.parse(response);
-        for (var key in objectAry) {
-          var cellObject = objectAry[key];
+        var frameAry = objectAry['frame'];
+        for (var key in frameAry) {
+          var cellObject = frameAry[key];
           var idx = cellObject.idx;
           var cellIdx = 1;
           for (var i = 0; i < cellObject.content.length; i++) {
@@ -226,7 +227,18 @@ var pinDownList = '';
            cellIdx++;
           }
         }
-        console.log(objectAry.map(content => ({ content })))
+        var pinbuttonAry = objectAry['pinbutton'];
+        for (var key in pinbuttonAry) {
+          var pinbuttonObject = pinbuttonAry[key];
+          var idx = pinbuttonObject.idx;
+          var disabled = pinbuttonObject.disabled;
+          var calculatedId = 'b' + idx;
+           var pinButton = document.getElementById(calculatedId);
+           if (pinButton != undefined) {
+             pinButton.disabled = disabled;
+         
+           }
+        }
     },
     error: function(xhr) {
     }

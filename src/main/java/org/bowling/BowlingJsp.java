@@ -1,7 +1,5 @@
 package org.bowling;
 
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -59,9 +57,22 @@ public class BowlingJsp extends HttpServlet {
       return contentList.toString();
     }
 
+     public String getPinButtonAsJson() {
+     List<String> contentList = new ArrayList<>();
+      for (PinButton pinbutton : pinButton) {
+          contentList.add(pinbutton.toString());
+      }
+      return contentList.toString();
+    }
+     
+    public String getAllAsJson() {
+    return "{"+"\"frame\":" + getFramesAsJson() + ","
+             + "\"pinbutton\":" + getPinButtonAsJson()
+            + "}";
+    } 
+        
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("bowlingscoring.jsp");
         reset();
         String pindownlistStr = request.getParameter("pinDownList");
         if (pindownlistStr == null || pindownlistStr.isEmpty()) {
@@ -72,17 +83,11 @@ public class BowlingJsp extends HttpServlet {
         for(String scoreValue : pindownList) {
             handle(scoreValue);
         }
-        this.getFrames();
-        this.getPinButton();
+    
         PrintWriter printWriter = response.getWriter();
-        printWriter.write(this.getFramesAsJson());
-        //requestDispatcher.forward(request, response);
+        printWriter.write(this.getAllAsJson());
     }
 
-//    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        // TODO Auto-generated method stub
-//        doGet(request, response);
-//    }
 
     public void handle(String currentScore) {
         int pinDown = Integer.valueOf(currentScore);
@@ -228,6 +233,11 @@ public class BowlingJsp extends HttpServlet {
 
         public boolean isDisabled() {
             return disabled;
+        }
+        
+        @Override
+        public String toString() {
+        return "{" + "\"idx\"" +":" + this.text +","+ "\"disabled\"" + ":" + this.isDisabled() + "}";
         }
     }
 
