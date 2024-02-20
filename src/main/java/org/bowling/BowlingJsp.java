@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-@WebServlet(name = "Scoring", value = "/scoring")
+@WebServlet("/scoring")
 public class BowlingJsp extends HttpServlet {
     private int frameCounter = 1;
     Map<Integer, List<Integer>> scoreMap = new HashMap<>();
