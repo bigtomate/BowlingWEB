@@ -1,7 +1,6 @@
 package org.bowling;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,7 +10,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-@WebServlet("/scoring")
+
 public class BowlingJsp extends HttpServlet {
     private int frameCounter = 1;
     Map<Integer, List<Integer>> scoreMap = new HashMap<>();
@@ -71,7 +70,7 @@ public class BowlingJsp extends HttpServlet {
              + "\"pinbutton\":" + getPinButtonAsJson()
             + "}";
     } 
-        
+
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         reset();

@@ -190,7 +190,7 @@
 <button id ="reset" style="margin-left:20px;">reset</button>
 <span id="displayScore"> ${score} </span>
 </html>
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript">
 var pinDownList = '';
      var scoringBtns = document.getElementsByClassName("scoringbtn");
